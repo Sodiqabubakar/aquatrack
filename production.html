@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AquaTrack — Water Factory Production</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <span class="logo-icon">💧</span>
+          <div class="logo-text">
+            <span>AquaTrack</span>
+            <span class="logo-tagline">Water Factory Ops</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="dashboard.html"> ▦ Dashboard </a>
+
+          <a href="production.html" class="active"> ▣ Production </a>
+
+          <a href="sales.html"> 🛒 Sales </a>
+
+          <a href="expenses.html"> ▤ Expenses </a>
+        </nav>
+
+        <div class="user">
+          <span>Bola Manager</span>
+          👤
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <!-- PAGE HEADER -->
+        <section class="content">
+          <div class="page-header">
+            <h1>Production</h1>
+
+            <p>Track daily output across machines</p>
+          </div>
+
+          <!-- PAGE GRID -->
+          <div class="page-grid">
+            <!-- LEFT SIDE: PRODUCTION RECORDS -->
+            <div>
+              <div class="records">
+                <!-- RECORD 1 -->
+                <div class="record">
+                  <h3>Sachet Machine</h3>
+
+                  <p>Morning shift</p>
+
+                  <strong> 500 bags </strong>
+
+                  <br />
+
+                  <span class="status"> Completed </span>
+                </div>
+
+                <!-- RECORD 2 -->
+                <div class="record">
+                  <h3>Bottle Machine</h3>
+
+                  <p>Night shift</p>
+
+                  <strong> 250 packs </strong>
+
+                  <br />
+
+                  <span class="status pending"> In progress </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE: ADD PRODUCTION FORM -->
+            <div class="form-card" id="productionForm">
+              <h2>Add Production</h2>
+
+              <p>Record today's production output</p>
+
+              <!-- DATE -->
+              <div class="input-group">
+                <label> Production Date </label>
+
+                <input type="date" value="2026-08-13" />
+              </div>
+
+              <!-- MACHINE -->
+              <div class="input-group">
+                <label> Machine Type </label>
+
+                <select>
+                  <option>Sachet Machine</option>
+
+                  <option>Bottle Machine</option>
+                </select>
+              </div>
+
+              <!-- QUANTITY -->
+              <div class="input-group">
+                <label> Quantity Produced </label>
+
+                <input
+                  type="number"
+                  id="productionQuantity"
+                  placeholder="Enter number of bags"
+                />
+              </div>
+
+              <!-- GOOD BAGS -->
+              <div class="input-group">
+                <label> Good Bags </label>
+
+                <input
+                  type="number"
+                  id="goodBags"
+                  placeholder="Enter number of good bags"
+                />
+              </div>
+
+              <!-- DAMAGED -->
+              <div class="input-group">
+                <label> Damaged / Leaked Bags </label>
+
+                <input
+                  type="number"
+                  id="damagedBags"
+                  placeholder="Enter number of damaged bags"
+                />
+              </div>
+
+              <!-- BUTTONS -->
+              <div class="form-buttons">
+                <button type="button" class="secondary-btn">Cancel</button>
+
+                <button type="button" id="saveProduction" class="primary-btn">
+                  Save Production
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

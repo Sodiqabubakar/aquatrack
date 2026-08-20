@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AquaTrack — Water Factory Expenses</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <span class="logo-icon">💧</span>
+          <div class="logo-text">
+            <span>AquaTrack</span>
+            <span class="logo-tagline">Water Factory Ops</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="dashboard.html"> ▦ Dashboard </a>
+
+          <a href="production.html"> ▣ Production </a>
+
+          <a href="sales.html"> 🛒 Sales </a>
+
+          <a href="expenses.html" class="active"> ▤ Expenses </a>
+        </nav>
+
+        <div class="user">
+          <span>Bola Manager</span>
+          👤
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <section class="content">
+          <!-- PAGE HEADER -->
+          <div class="page-header">
+            <h1>Expenses</h1>
+
+            <p>Track and manage factory expenses</p>
+          </div>
+
+          <!-- PAGE GRID -->
+          <div class="page-grid">
+            <!-- EXPENSE RECORDS -->
+            <div>
+              <div class="records">
+                <!-- EXPENSE 1 -->
+                <div class="record">
+                  <h3>Diesel</h3>
+
+                  <p>Generator fuel</p>
+
+                  <strong> ₦80,000 </strong>
+
+                  <br />
+
+                  <span class="status"> Recorded </span>
+                </div>
+
+                <!-- EXPENSE 2 -->
+                <div class="record">
+                  <h3>Machine Maintenance</h3>
+
+                  <p>Sachet machine repair</p>
+
+                  <strong> ₦15,500 </strong>
+
+                  <br />
+
+                  <span class="status"> Recorded </span>
+                </div>
+
+                <!-- EXPENSE 3 -->
+                <div class="record">
+                  <h3>Petrol</h3>
+
+                  <p>Water pump</p>
+
+                  <strong> ₦12,000 </strong>
+
+                  <br />
+
+                  <span class="status pending"> Pending </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ADD EXPENSE FORM -->
+            <div class="form-card">
+              <h2>Add Expense</h2>
+
+              <p>Record a new factory expense</p>
+
+              <!-- DATE -->
+              <div class="input-group">
+                <label> Expense Date </label>
+
+                <input type="date" value="2026-08-13" />
+              </div>
+
+              <!-- CATEGORY -->
+              <div class="input-group">
+                <label> Expense Category </label>
+
+                <select id="expenseCategory">
+                  <option value="">Select category</option>
+
+                  <option value="Diesel">Diesel</option>
+
+                  <option value="Petrol">Petrol</option>
+
+                  <option value="Maintenance">Maintenance</option>
+
+                  <option value="Transportation">Transportation</option>
+
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- AMOUNT -->
+              <div class="input-group">
+                <label> Amount (₦) </label>
+
+                <input
+                  type="number"
+                  id="expenseAmount"
+                  placeholder="Enter amount"
+                />
+              </div>
+
+              <!-- DESCRIPTION -->
+              <div class="input-group">
+                <label> Description </label>
+
+                <input
+                  type="text"
+                  id="expenseDescription"
+                  placeholder="Enter expense description"
+                />
+              </div>
+
+              <!-- BUTTONS -->
+              <div class="form-buttons">
+                <button type="button" class="secondary-btn">Cancel</button>
+
+                <button type="button" class="primary-btn" id="saveExpense">
+                  Save Expense
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaTrack — Water Factory Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <span class="logo-icon">💧</span>
+          <div class="logo-text">
+            <span>AquaTrack</span>
+            <span class="logo-tagline">Water Factory Ops</span>
+          </div>
+        </div>
+        <nav>
+          <a href="dashboard.html" class="active">▦ Dashboard</a>
+          <a href="production.html">▣ Production</a>
+          <a href="sales.html">🛒 Sales</a>
+          <a href="expenses.html">▤ Expenses</a>
+        </nav>
+
+        <div class="user">
+          <span>Bola Manager</span>
+          👤
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Header -->
+        <header class="topbar">
+          <div>
+            <h3>Good morning, Manager 👋</h3>
+            <p>Here's what's happening today</p>
+          </div>
+
+          <div class="icons">🔔 &nbsp; 👤</div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <section class="content">
+          <h1>Dashboard</h1>
+          <p class="description">Overview of your factory operations</p>
+
+          <!-- Summary Cards -->
+          <!-- OPENING FIGURES -->
+
+          <div class="opening-section">
+            <div class="opening-card">
+              <h2>Opening Figures</h2>
+
+              <p>Enter the figures at the start of the day</p>
+
+              <div class="opening-fields">
+                <!-- OPENING BALANCE -->
+                <div class="opening-field">
+                  <label for="openingBalance"> Opening Balance (₦) </label>
+
+                  <input
+                    type="number"
+                    id="openingBalance"
+                    placeholder="Enter opening cash"
+                  />
+                </div>
+
+                <!-- OPENING STOCK -->
+                <div class="opening-field">
+                  <label for="openingStock"> Opening Stock (Bags) </label>
+
+                  <input
+                    type="number"
+                    id="openingStock"
+                    placeholder="Enter opening stock"
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  class="primary-btn"
+                  id="saveOpeningFigures"
+                >
+                  Save Opening Figures
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Production</h3>
+              <strong id="dashboardProduction">0</strong>
+              <p>Bags produced</p>
+            </div>
+
+            <div class="card">
+              <h3>Current Stock</h3>
+              <strong id="currentStock">0</strong>
+              <p>Bags in stock</p>
+            </div>
+
+            <div class="card">
+              <h3>Sales</h3>
+              <strong id="dashboardSales">₦0</strong>
+              <p>Today's sales</p>
+            </div>
+
+            <div class="card">
+              <h3>Expenses</h3>
+              <strong id="dashboardExpenses">₦0</strong>
+              <p>Today's expenses</p>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <h3 class="section-title">Quick Action</h3>
+
+          <div class="actions">
+            <a href="production.html"> + Add Production </a>
+
+            <a href="sales.html"> + Record Sales </a>
+
+            <a href="expenses.html"> + Add Expenses </a>
+            <button type="button" id="resetData" class="secondary-btn">
+              Reset All Figures
+            </button>
+          </div>
+
+          <!-- Overview -->
+          <h3 class="section-title">Production & Sales Overview</h3>
+
+          <div class="overview">
+            <!-- Production Chart -->
+            <div class="overview-card">
+              <h3>Production Overview</h3>
+
+              <div class="chart-container">
+                <div class="chart">
+                  <div class="bar" style="height: 55%"></div>
+                  <div class="bar" style="height: 70%"></div>
+                  <div class="bar" style="height: 60%"></div>
+                  <div class="bar" style="height: 40%"></div>
+                  <div class="bar" style="height: 75%"></div>
+                </div>
+
+                <div class="days">
+                  <span>Mon</span>
+                  <span>Tue</span>
+                  <span>Wed</span>
+                  <span>Thu</span>
+                  <span>Fri</span>
+                </div>
+              </div>
+
+              <p><strong id="productionOverview">0</strong> bags produced</p>
+            </div>
+
+            <!-- Stock -->
+            <div class="overview-card">
+              <h3>Stock Status</h3>
+
+              <div class="stock-number" id="dashboardStockStatus">0</div>
+
+              <p>Bags in stock</p>
+
+              <div class="progress">
+                <div></div>
+              </div>
+
+              <small>72% of storage capacity</small>
+
+              <small> Last Updated Today, 4:30 PM </small>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="overview-card">
+              <h3>Recent Activity</h3>
+
+              <ul class="activity">
+                <li>
+                  <strong>Production added</strong><br />
+                  +108 good bags<br />
+                  Today
+                </li>
+
+                <li>
+                  <strong>Sales recorded</strong><br />
+                  92 bags — ₦32,200<br />
+                  Today
+                </li>
+
+                <li>
+                  <strong>Expense added</strong><br />
+                  Diesel — ₦10,000<br />
+                  Today
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

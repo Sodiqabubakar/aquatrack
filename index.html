@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaTrack — Water Factory Login</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="login-page">
+    <div class="login-card">
+      <div class="logo">
+        <span class="logo-icon">💧</span>
+        <div>
+          <span>AquaTrack</span>
+          <div class="logo-tagline">Water Factory Operations</div>
+        </div>
+      </div>
+
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Manage your water factory's daily operations</p>
+
+      <form id="loginForm">
+        <label for="email">Email Address</label>
+        <div class="input-group">
+          <span>✉</span>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <label for="password">Password</label>
+        <div class="input-group">
+          <span>🔒</span>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <div class="login-options">
+          <label class="remember">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </label>
+
+          <a href="#" class="forgot">Forgot Password</a>
+        </div>
+
+        <button type="submit" class="primary-btn">Log in</button>
+      </form>
+
+      <p class="help">Need help? <a href="#">Contact Admin</a></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
