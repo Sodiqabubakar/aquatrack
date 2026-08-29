@@ -27,9 +27,15 @@
         </nav>
 
         <div class="user">
-          <span>Bola Manager</span>
+          <span id="profileName">Bola Manager</span>
           👤
         </div>
+        <a
+          href="#"
+          id="logoutLink"
+          style="font-size: 12px; color: var(--text-muted)"
+          >Switch role</a
+        >
       </aside>
 
       <!-- Main Content -->
@@ -37,7 +43,7 @@
         <!-- Header -->
         <header class="topbar">
           <div>
-            <h3>Good morning, Manager 👋</h3>
+            <h3 id="greeting">Good morning, Manager 👋</h3>
             <p>Here's what's happening today</p>
           </div>
 
@@ -173,7 +179,7 @@
                 <div></div>
               </div>
 
-              <small>72% of storage capacity</small>
+              <small class="stock-percent">72% of storage capacity</small>
 
               <small> Last Updated Today, 4:30 PM </small>
             </div>
@@ -182,7 +188,7 @@
             <div class="overview-card">
               <h3>Recent Activity</h3>
 
-              <ul class="activity">
+              <ul class="activity" id="recentActivity">
                 <li>
                   <strong>Production added</strong><br />
                   +108 good bags<br />

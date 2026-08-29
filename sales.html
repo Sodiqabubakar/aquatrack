@@ -32,7 +32,7 @@
         </nav>
 
         <div class="user">
-          <span>Bola Manager</span>
+          <span id="profileName">Bola Manager</span>
           👤
         </div>
       </aside>
@@ -110,7 +110,11 @@
               <div class="input-group">
                 <label> Customer / Buyer </label>
 
-                <input type="text" placeholder="Enter customer name" />
+                <input
+                  type="text"
+                  id="customerName"
+                  placeholder="Enter customer name"
+                />
               </div>
 
               <!-- QUANTITY -->
@@ -142,7 +146,7 @@
               <div class="input-group">
                 <label> Payment Status </label>
 
-                <select>
+                <select id="paymentStatus">
                   <option>Paid</option>
 
                   <option>Pending</option>
